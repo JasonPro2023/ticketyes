@@ -1,6 +1,4 @@
-# 📚 Glosario del Stack — TicketYes
-
-Referencia rápida de cada tecnología que usaremos. Léelo una vez y consúltalo cuando lo necesites.
+# Descripción del Stack de TicketYes
 
 ---
 
