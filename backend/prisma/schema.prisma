@@ -1,0 +1,93 @@
+// TicketYes - Prisma Schema
+// Docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+//  Enums
+// ============================================
+
+enum UserRole {
+  USER
+  AGENT
+  ADMIN
+}
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+enum TicketPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum TicketCategory {
+  BILLING
+  TECHNICAL
+  ACCOUNT
+  GENERAL
+  OTHER
+}
+
+// ============================================
+//  Models
+// ============================================
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      UserRole @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  createdTickets  Ticket[] @relation("TicketCreatedBy")
+  assignedTickets Ticket[] @relation("TicketAssignedTo")
+
+  @@index([email])
+  @@map("users")
+}
+
+model Ticket {
+  id          String         @id @default(uuid())
+  title       String
+  content     String
+  status      TicketStatus   @default(OPEN)
+  priority    TicketPriority @default(MEDIUM)
+  category    TicketCategory @default(GENERAL)
+
+  // ML prediction metadata
+  predictedByMl Boolean @default(false)
+  mlConfidence  Float?
+
+  // Relations
+  createdById String
+  createdBy   User   @relation("TicketCreatedBy", fields: [createdById], references: [id], onDelete: Cascade)
+
+  assignedToId String?
+  assignedTo   User?   @relation("TicketAssignedTo", fields: [assignedToId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([priority])
+  @@index([category])
+  @@index([createdById])
+  @@index([assignedToId])
+  @@map("tickets")
+}
