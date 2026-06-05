@@ -1,7 +1,5 @@
 # Descripción del Stack de TicketYes
 
----
-
 ## 🟢 Node.js
 
 **Qué es**: Un entorno que ejecuta JavaScript (o TypeScript) fuera del navegador, en el servidor.
