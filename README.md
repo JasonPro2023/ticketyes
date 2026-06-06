@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎫 TicketYes
+# TicketYes
 
 ### Clasificador inteligente de tickets de soporte con Machine Learning
 
@@ -13,28 +13,26 @@
 
 ---
 
-## 🧠 ¿Qué es TicketYes?
+## ¿Qué es TicketYes?
 
 **TicketYes** es una aplicación web full-stack que ayuda a empresas a **clasificar automáticamente tickets de soporte** usando Machine Learning. El sistema analiza el texto del ticket, predice la categoría y el nivel de urgencia, y lo asigna al equipo correcto.
 
-### 🎯 Problema que resuelve
+Esta app la hice como practica para comprender como se hacen y como funcionan las apps de tickets en las empresas de TI
 
-Empresas reciben cientos o miles de tickets de soporte al día. Clasificarlos manualmente es:
-- ⏱️ Lento
-- 💸 Costoso
-- ❌ Propenso a errores humanos
-- 😤 Genera tiempos de respuesta altos
+### Propósito
 
-TicketYes automatiza esta clasificación, permitiendo respuestas más rápidas y mejor enrutamiento.
+Normalmente, las empresas reciben muchisimos de tickets de soporte al día. El clasificarlos manualmente es lento, costoso, propenso a errores humanos y por lo tanto, los tiempos de respuesta son muy altos.
+
+Con la app TicketYes se automatiza la clasificación, permitiendo respuestas más rápidas y mejor enrutamiento a los equipos.
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 ┌─────────────┐      ┌──────────────┐      ┌────────────────┐
 │   Frontend  │ ───> │  Backend API │ ───> │  ML Service    │
-│  React+TS   │ <─── │  Node+TS     │ <─── │  Python+FastAPI │
+│   React+TS  │ <─── │  Node+TS     │ <─── │ Python+FastAPI │
 └─────────────┘      └──────┬───────┘      └────────────────┘
                             │
                     ┌───────▼────────┐
@@ -45,7 +43,7 @@ TicketYes automatiza esta clasificación, permitiendo respuestas más rápidas y
 
 ---
 
-## 🛠️ Tech Stack
+## Stack utilizado:
 
 | Capa | Tecnología |
 |---|---|
@@ -58,7 +56,7 @@ TicketYes automatiza esta clasificación, permitiendo respuestas más rápidas y
 
 ---
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 ticketyes/
@@ -97,7 +95,7 @@ ticketyes/
 
 ---
 
-## 🚀 Roadmap
+## Roadmap
 
 - [x] Setup inicial del proyecto
 - [ ] Backend: autenticación con JWT
@@ -112,7 +110,7 @@ ticketyes/
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT.
 
@@ -120,6 +118,6 @@ Este proyecto está bajo la Licencia MIT.
 
 <div align="center">
 
-Construido con 💙 por [Ivan Alejandro Hernández Regino](https://github.com/JasonPro2023)
+Construido por [Ivan Alejandro Hernández Regino](https://github.com/JasonPro2023)
 
 </div>
