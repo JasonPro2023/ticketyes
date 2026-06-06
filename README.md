@@ -15,9 +15,9 @@
 
 ## ¿Qué es TicketYes?
 
-**TicketYes** es una aplicación web full-stack que ayuda a empresas a **clasificar automáticamente tickets de soporte** usando Machine Learning. El sistema analiza el texto del ticket, predice la categoría y el nivel de urgencia, y lo asigna al equipo correcto.
+**TicketYes** es una aplicación web que ayuda a empresas a **clasificar automáticamente tickets de soporte** usando Machine Learning. El sistema analiza el texto del ticket, predice la categoría y el nivel de urgencia, y lo asigna al equipo correcto.
 
-Esta app la hice como practica para comprender como se hacen y como funcionan las apps de tickets en las empresas de TI
+Esta app la hice como practica para aprender como se hacen y como funcionan las apps de tickets en las empresas de TI
 
 ### Propósito
 
