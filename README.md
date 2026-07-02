@@ -15,7 +15,7 @@
 
 ## ¿Qué es TicketYes?
 
-**TicketYes** es una aplicación web que ayuda a empresas a **clasificar automáticamente tickets de soporte** usando Machine Learning. El sistema analiza el texto del ticket, predice la categoría y el nivel de urgencia, y lo asigna al equipo correcto.
+**TicketYes** es una aplicación web que ayuda a empresas a clasificar automáticamente tickets de soporte usando Machine Learning. El sistema analiza el texto del ticket, predice la categoría y el nivel de urgencia, y lo asigna al equipo correcto.
 
 Esta app la hice como practica para aprender como se hacen y como funcionan las apps de tickets en las empresas de TI
 
@@ -52,61 +52,6 @@ Con la app TicketYes se automatiza la clasificación, permitiendo respuestas má
 | **Base de datos** | PostgreSQL |
 | **ML Service** | Python 3.11+, FastAPI, scikit-learn, NLTK |
 | **Autenticación** | JWT |
-| **Deploy** | Vercel (FE) + Render (BE/ML) + Neon (DB) |
-
----
-
-## Estructura del proyecto
-
-```
-ticketyes/
-├── backend/          # API REST con Node + TypeScript
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   ├── middlewares/
-│   │   ├── prisma/
-│   │   ├── utils/
-│   │   ├── config/
-│   │   └── index.ts
-│   └── tests/
-├── frontend/         # SPA con React + TypeScript
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── hooks/
-│   │   ├── services/
-│   │   ├── types/
-│   │   ├── contexts/
-│   │   ├── App.tsx
-│   │   └── main.tsx
-│   └── public/
-├── ml-service/       # Servicio de ML con Python + FastAPI
-│   ├── app/
-│   │   ├── models/
-│   │   ├── routers/
-│   │   ├── services/
-│   │   └── main.py
-│   ├── notebooks/    # Jupyter notebooks de experimentación
-│   └── tests/
-└── docs/             # Diagramas, capturas, ER
-```
-
----
-
-## Roadmap
-
-- [x] Setup inicial del proyecto
-- [ ] Backend: autenticación con JWT
-- [ ] Backend: CRUD de tickets
-- [ ] ML: modelo clasificador (Naive Bayes)
-- [ ] ML: endpoint de predicción
-- [ ] Frontend: dashboard de tickets
-- [ ] Frontend: formulario de creación
-- [ ] Frontend: visualización de predicciones
-- [ ] Deploy completo en producción
-- [ ] CI/CD con GitHub Actions
 
 ---
 
